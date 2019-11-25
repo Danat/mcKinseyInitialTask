@@ -10,6 +10,22 @@ import org.junit.Test;
  */
 public class TrainsAndTownsAppTest
 {
+
+    @Test
+    public void testPQ() {
+        MinEdgePriorityQueue pq = new MinEdgePriorityQueue();
+        pq.add(new Edge(1, 10));
+        pq.add(new Edge(2, 8));
+        pq.add(new Edge(3, 11));
+        pq.add(new Edge(4, 7));
+        pq.add(new Edge(5, 12));
+        pq.add(new Edge(6, 6));
+        System.out.println(pq.poll());
+        System.out.println(pq.poll());
+        System.out.println(pq.poll());
+        System.out.println(pq.poll());
+    }
+
     @Test
     public void defaultTest() {
         Graph graph = new Graph(getDefaultRoutesStub());
